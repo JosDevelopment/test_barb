@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  /* Azul barber (PRIMARY) */
+  --color-primary-50:  #eaf1ff;
+  --color-primary-100: #d3e3ff;
+  --color-primary-200: #a8c6ff;
+  --color-primary-300: #7aa9ff;
+  --color-primary-400: #4c8bff;
+  --color-primary-500: #1f6dff;
+  --color-primary-600: #1756d1;
+  --color-primary-700: #1243a3;
+  --color-primary-800: #0d2f75;
+  --color-primary-900: #081f4a;
+  --color-primary-950: #040f25;
+
+  /* Rojo barber (ACCENT) */
+  --color-accent-50:  #ffeaea;
+  --color-accent-100: #ffd5d5;
+  --color-accent-200: #ffaaaa;
+  --color-accent-300: #ff7f7f;
+  --color-accent-400: #ff5555;
+  --color-accent-500: #ef2d2d;
+  --color-accent-600: #c42020;
+  --color-accent-700: #991818;
+  --color-accent-800: #6f1010;
+  --color-accent-900: #490a0a;
+  --color-accent-950: #240505;
+
+  /* Negro / Carbón (NEUTRAL) */
+  --color-neutral-50:  #f5f6f7;
+  --color-neutral-100: #e9ebee;
+  --color-neutral-200: #d3d6dc;
+  --color-neutral-300: #b5bac4;
+  --color-neutral-400: #8f949c;
+  --color-neutral-500: #6c717a;
+  --color-neutral-600: #51555c;
+  --color-neutral-700: #383b40;
+  --color-neutral-800: #232528;
+  --color-neutral-900: #141518;
+  --color-neutral-950: #090a0b;
+}
+
+
+
+:root {
+  scroll-behavior: smooth;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.input {
+  margin-top: 0.25rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-800);
+  padding: 0.5rem 0.75rem;
+  color: var(--color-primary-50);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-primary-300);
+  opacity: 1;
+}
+
+.input:focus {
+  border-color: var(--color-primary-500);
+}
